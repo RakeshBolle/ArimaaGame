@@ -16,7 +16,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ArimaaTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     ArimaaBoard(modifier = Modifier.padding(innerPadding))
                 }
             }
@@ -26,17 +25,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun ArimaaBoard(modifier: Modifier = Modifier) {
-    // Main custom composable to render the Arimaa board and initial state
-    Box(
         modifier = modifier
             .fillMaxSize()
-            .aspectRatio(1f) // Force to be square
-    ) {
-        Canvas(modifier = Modifier.fillMaxSize()) {
-            drawArimaaBoard()
+        ) {
+        }
         }
     }
-}
 
 // Draw the 8x8 Arimaa board
 private fun DrawScope.drawArimaaBoard() {
