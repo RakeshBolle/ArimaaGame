@@ -54,19 +54,3 @@ private fun DrawScope.drawArimaaBoard() {
         }
     }
 
-    // Draw trap squares
-    val trapCoordinates = listOf(
-        Pair(2, 2), Pair(2, 5),
-        Pair(5, 2), Pair(5, 5)
-    )
-    trapCoordinates.forEach { (row, col) ->
-        drawCircle(
-            color = trapColor,
-            radius = cellSize / 4,
-            center = androidx.compose.ui.geometry.Offset(
-                (col + 0.5f) * cellSize,
-                (row + 0.5f) * cellSize
-            )
-        )
-    }
-}
